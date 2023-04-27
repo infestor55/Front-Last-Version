@@ -1,0 +1,77 @@
+
+<div class="contain">
+    <div class="max-w-lg mx-auto shadow px-6 py-7 rounded overflow-hidden">
+        <h2 class="text-2xl uppercase font-medium mb-1">Create New Product</h2>
+        <p class="text-gray-600 mb-6 text-sm">
+            Fill in the form to post your product
+        </p>
+        <form  method="post" autocomplete="off">
+            <div class="space-y-2">
+                <div>
+                    <label for="name" class="text-gray-600 mb-2 block">Product Name</label>
+                    <input [(ngModel)]=" product.name " type="text" name="name" id="name"
+                        class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+                        placeholder="Babies Product" >
+                </div>
+                <div>
+                    <label for="Description" class="text-gray-600 mb-2 block">Product Description</label>
+                    <input [(ngModel)]=" product.description " type="text" name="description" id="Description"
+                        class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+                        placeholder="Enter your product description here!" >
+                </div>
+                <div>
+                    <label for="price" class="text-gray-600 mb-2 block">Product Price</label>
+                    <input [(ngModel)]=" product.price " type="text" name="price" id="price"
+                        class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+                        placeholder="80$" >
+                </div>
+                
+                <div>
+                    <label for="color" class="text-gray-600 mb-2 block">Product Color</label>
+                    <input [(ngModel)]=" product.color " type="text" name="color" id="color"
+                        class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+                        placeholder="Blue">
+                </div>
+                <div>
+                    <label for="color" class="text-gray-600 mb-2 block">Owner</label>
+                    <input [(ngModel)]=" product.idOwner " type="text" name="color" id="color"
+                        class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+                        placeholder="Blue">
+                </div>
+                <div>
+                    <label for="color" class="text-gray-600 mb-2 block">Category</label>
+                    <input [(ngModel)]=" product.idCategory " type="text" name="color" id="color"
+                        class="block w-full border border-gray-300 px-4 py-3 text-gray-600 text-sm rounded focus:ring-0 focus:border-primary placeholder-gray-400"
+                        placeholder="Blue">
+                </div>
+                <div class="mt-4">
+                    <label for="image" class="block text-gray-600 font-medium mb-2">Select Image</label>
+                    <div class="flex items-center justify-center bg-grey-lighter">
+                      <label class="w-64 flex flex-col items-center px-4 py-6 bg-white text-gray-600 rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue hover:text-black">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M3.243 3a2 2 0 00-1.99 1.819L1.2 5h17.6l-.053-.181A2 2 0 0016.757 3H3.243zm-2.083 5h19.68l-2.08 7h-15.52l-2.08-7zm2.908 2a1 1 0 100 2h10a1 1 0 100-2H4.068z" clip-rule="evenodd"></path></svg>
+                        <span class="mt-2 text-sm font-normal">Select a file</span>
+                        <input type="file" name="image" id="image" class="hidden" (change)="select($event)">
+                      </label>
+                    </div>
+                  </div>
+            </div>
+            <div class="mt-6">
+                <div class="flex items-center">
+                    <input type="checkbox" name="aggrement" id="aggrement"
+                        class="text-primary focus:ring-0 rounded-sm cursor-pointer">
+                    <label for="aggrement" class="text-gray-600 ml-3 cursor-pointer">I have read and agree to the <a
+                            href="#" class="text-primary">terms & conditions</a></label>
+                </div>
+            </div>
+            <div class="mt-4">
+                <button type="submit" (click)="addProduct()"
+                    class="block w-full py-2 text-center text-white bg-primary border border-primary rounded hover:bg-transparent hover:text-primary transition uppercase font-roboto font-medium">Post Your Product</button>
+            </div>
+            
+        </form>
+
+        
+
+        
+    </div>
+</div>
